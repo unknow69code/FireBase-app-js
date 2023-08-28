@@ -2,3 +2,34 @@ body{
     background: #202020;
     color: rgb(255, 255, 255);
 }
+.colored-button{
+    background: green;
+}
+
+.modal {
+    border: 2px solid #ff9900; /* Cambia "#ff9900" al color que prefieras */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+
+ @keyframes colorChange {
+    0% {color: red;}
+    50% {color: blue;}
+    100% {color: green;}
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    70% { transform: scale(1); }
+}
+.animated-text{
+    animation: pulse 2s infinite;
+    font-weight: bolder;
+    animation: colorChange 2s infinite;
+} 
+.anime-text-font{
+    font-weight: bolder;
+}
+  

@@ -4,8 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firebase for js</title>
+  <title>Auth</title>
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Icono dela Web -->
+  <link rel="shortcut icon" href="https://mundowin.com/wp-content/uploads/2019/06/favicon-software.jpg" type="image/x-icon">
+  <!-- Toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- Main js -->
   <script type="module" src="./main.js"></script>
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -13,18 +20,21 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">FireApp js</a>
+      <a class="navbar-brand" href="#">FirebaseApp</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
+          <li class="nav-item logged-out">
             <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinmodal">Signin</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item logged-out">
             <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupmodal">signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link logged-in" href="#" id="Logout">Logout</a>
           </li>
         </ul>
       </div>
@@ -59,23 +69,42 @@
     <div class="modal-dialog">
       <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="Modal2">Signup</h1>
+          <h1 class="modal-title fs-5 anime-text-font" id="Modal2">Signup</h1>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form id="signup-form">
-            <label for="email">email:</label>
-            <input type="email" id="signup-email" class="form-control mb-3" placeholder="example21@gmail.com" required>
-            <label for="password">password:</label>
-            <input type="password" id="signup-password" class="form-control mb-3" placeholder="*********">
-            <button type="submit" class="btn btn-primary">
+            <label class="anime-text-font" for="email">Email:</label>
+            <input type="email" id="email" class="form-control mb-3" placeholder="example21@gmail.com" required>
+            <label class="anime-text-font" for="password">Password:</label>
+            <input type="password" id="password" class="form-control mb-3" placeholder="*********">
+            <button type="submit" class="btn btn-primary mb-3 anime-text-font">
               Registrer
             </button>
           </form>
+          <h5 class="animated-text">Others auth</h5>
+          <button type="button" id="googlelogin" class="btn btn-light colored-button">
+            <i class="bi-google"></i>
+            Google
+          </button>
+          <button class="btn btn-primary">
+            <i class="bi-facebook"></i>
+            Facebook
+          </button>
+          <button class="btn btn-dark">
+            <i class="bi-github"></i>
+            GitHub
+          </button>
+          <button class="btn btn-outline-dark">
+            <i class="bi-google-play"></i>
+            Play Store
+          </button>
         </div>
       </div>
     </div>
   </div>
+  <!-- Scrips Funtions Bootstrap y Toastify -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
